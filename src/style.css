@@ -7,13 +7,39 @@
 
 body {
   width: 100%;
+  background-color: #FFF;
+  color: #484946;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin: 40px;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F1F1F160;
+  border-radius: 0 8px 8px 0;
+  padding: 24px;
+  gap: 480px;
+}
+
+.header {
+  margin-bottom: 48px;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.header-paragraph > span {
+  font-weight: 700;
+}
+
+.dark-mode-icon {
+  size: 4px;
+  cursor: pointer;
 }
 
 
