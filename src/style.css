@@ -46,6 +46,7 @@ header {
 .dark-mode-icon {
   size: 4px;
   cursor: pointer;
+  width: 64%;
 }
 
 form {
@@ -57,7 +58,7 @@ form {
   width: 100%;
 }
 
-.name {
+.input-section {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -67,28 +68,26 @@ form {
   border-left: 8px solid #286BB9;
 }
 
-.name input,
-.email input {
+.input-section:hover,
+.gender:hover,
+.terms:hover {
+  border-left: 8px solid #125cb0;
+}
+
+.input-section input,
+.input-section select,
+.input-section textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #286BB9;
   border-radius: 4px;
 }
 
-label > span {
+form span {
   color: #F42E31;
 }
 
-.email {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 24px;
-  background-color: #F1F1F160;
-  font-weight: 700;
-  border-left: 8px solid #286BB9;
-}
-
+/* todo: change the round border */
 .gender {
   display: flex;
   flex-direction: column;
@@ -109,3 +108,34 @@ input[type="radio"] {
   accent-color: #286BB9; 
 }
 
+.description textarea {
+  height: 8rem;
+}
+
+.terms {
+  gap: 8px;
+  padding: 24px;
+  background-color: #F1F1F160;
+  font-weight: 700;
+  border-left: 8px solid #286BB9;
+}
+
+.terms,
+.message {
+  display: flex;
+  font-weight: 300;
+}
+
+button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: #FBFCFF;
+  background-color: #286BB9;
+  border: 0px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #125cb0;
+  cursor: pointer;
+}
