@@ -98,6 +98,10 @@ form span {
   border-left: 8px solid #286BB9;
 }
 
+form select {
+  background-color: #FFF;
+}
+
 .gender-options {
   display: flex;
   gap: 32px;
