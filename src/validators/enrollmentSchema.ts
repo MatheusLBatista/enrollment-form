@@ -15,6 +15,11 @@ export const EnrollmentSchema = z.object({
         .refine((val) => val === 'male' || val === 'female',
             { message: "Campo sexo é obrigatório." }
         ),
+    course: z
+        .string()
+        .refine(val => val !== "", {
+            message: "Selecione um curso."
+        }),
     description: z
         .string()
         .optional(),
