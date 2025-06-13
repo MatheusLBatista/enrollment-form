@@ -1,4 +1,5 @@
-import './style.css'
+import './style.css';
+import { EnrollmentSchema } from './validators/enrollmentSchema';
 
 const form = document.querySelector<HTMLFormElement>('#form')!;
 const name = document.querySelector<HTMLInputElement>('#name')!;
@@ -27,7 +28,7 @@ function getGenderSelected() {
     if(femaleGender.checked) return 'female';
 }
 
-let enrollments: Enrollment[] = [];
+export let enrollments: Enrollment[] = [];
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -40,6 +41,8 @@ form.addEventListener('submit', (event) => {
         description: description.value,
         terms: terms.checked
     }
+
+    const parsedData = EnrollmentSchema.parse(e);
 
     enrollments.push(e);
 
