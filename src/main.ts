@@ -1,8 +1,5 @@
 import './style.css';
-import { z } from 'zod';
 import { EnrollmentSchema } from './validators/enrollmentSchema';
-
-type Enrollment = z.infer<typeof EnrollmentSchema>;
 
 const form = document.querySelector<HTMLFormElement>('#form')!;
 const name = document.querySelector<HTMLInputElement>('#name')!;
@@ -23,9 +20,7 @@ function getGenderSelected() {
     return '';
 }
 
-let enrollments: Enrollment[] = [];
-
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async(event) => {
     event.preventDefault();
 
     try {
@@ -38,8 +33,12 @@ form.addEventListener('submit', (event) => {
             terms: terms.checked
         });
 
-        enrollments.push(parsedData);
-        console.log(JSON.stringify(enrollments));
+        await fetch('http://localhost:3000/data', {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify(parsedData),
+        })
+
         limparFormulario();
     } catch (err) {
         console.error("Erro de validação:", err);
