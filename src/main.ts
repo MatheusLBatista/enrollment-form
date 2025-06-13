@@ -44,3 +44,10 @@ form.addEventListener('submit', async(event) => {
         console.error("Erro de validação:", err);
     }
 });
+
+const changeMode = document.getElementById("change-mode");
+const body = document.body;
+
+changeMode?.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+});
