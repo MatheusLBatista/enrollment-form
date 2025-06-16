@@ -87,7 +87,6 @@ form span {
   color: #F42E31;
 }
 
-/* todo: change the round border */
 .gender {
   display: flex;
   flex-direction: column;
@@ -149,36 +148,11 @@ body.dark-mode {
   background-color: black;
   color: #FCFDFC
 }
-/* 
-input,
-form select,
-textarea {
+
+body.dark-mode .input-section input,
+body.dark-mode .input-section select,
+body.dark-mode .input-section textarea {
   background-color: #1E1E1E;
-  color: #8F8D99;
-} */
-
-header.dark-mode {
-  background-color: #373636;
-}
-
-.input-section.dark-mode {
-  background-color: #373636;
-}
-
-.input-section input.dark-mode,
-.input-section select.dark-mode,
-.input-section textarea.dark-mode {
-  background-color: #1E1E1E;
-}
-
-.gender.dark-mode {
-  background-color: #373636;
-}
-
-form select.dark-mode {
-  background-color: #1E1E1E;
-}
-
-.terms.dark-mode {
-  background-color: #373636;
+  color: #FFFFFF;
+  border-color: #555555;
 }
