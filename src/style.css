@@ -166,3 +166,16 @@ body.dark-mode .input-section textarea {
 .container-data {
   gap: 16px;
 }
+
+.button-form {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button-link {
+  text-decoration: none;
+  color: #FBFCFF;
+}
