@@ -35,6 +35,10 @@ async function loadData() {
     }catch (error){
         console.log('Erro ao carregar dados:', error)
     }
-}
+};
+
+document.getElementById('backBtn')?.addEventListener('click', () => {
+    window.location.href = 'index.html'
+});
 
 loadData()

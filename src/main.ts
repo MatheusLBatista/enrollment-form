@@ -46,4 +46,8 @@ form.addEventListener('submit', async(event) => {
     }
 });
 
+document.getElementById('dataBtn')?.addEventListener('click', () => {
+    window.location.href = 'data.html'
+});
+
 darkMode();

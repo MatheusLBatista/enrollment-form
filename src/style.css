@@ -129,6 +129,12 @@ input[type="radio"] {
   font-weight: 300;
 }
 
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 button {
   padding: 12px 24px;
   border-radius: 8px;
