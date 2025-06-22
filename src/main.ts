@@ -46,8 +46,12 @@ form.addEventListener('submit', async(event) => {
     }
 });
 
-document.getElementById('dataBtn')?.addEventListener('click', () => {
-    window.location.href = 'data.html'
-});
+const dataBtn = document.getElementById('dataBtn') as HTMLButtonElement || null;
+
+if(dataBtn) {
+    dataBtn?.addEventListener('click', () => {
+        window.location.href = 'data.html'
+    });
+}
 
 darkMode();

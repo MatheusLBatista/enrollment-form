@@ -37,7 +37,9 @@ async function loadData() {
     }
 };
 
-document.getElementById('backBtn')?.addEventListener('click', () => {
+const backBtn = document.getElementById('backBtn') as HTMLButtonElement || null;
+
+backBtn?.addEventListener('click', () => {
     window.location.href = 'index.html'
 });
 
