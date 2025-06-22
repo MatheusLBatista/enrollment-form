@@ -28,7 +28,27 @@ async function loadData() {
                     <div>Sexo: <span>${person.gender}</span></div>
                     <div>Curso: <span>${person.course}</span></div>
                     <div>Descrição: <span>${description()}</span></div>
+                    <button type="submit" class="deleteBtn" data-id="${person.id}">Deletar</button>
                 `;
+
+                const deleteBtn = div.querySelector<HTMLButtonElement>('.deleteBtn');
+
+                deleteBtn?.addEventListener('click', async() => {
+                    const id = deleteBtn.dataset.id;
+                    const confirmation = confirm("Deseja mesmo deletar esse cadastro?");
+
+                    if(confirmation && id) {
+                        try {
+                            await fetch (`http://localhost:3000/data/${id}`, {
+                                method: "DELETE"
+                            });
+                            div.remove();
+                        } catch (err) {
+                            alert('Erro ao deletar cadastro');
+                        }
+                    }
+                });
+                
                 container?.appendChild(div);
             })
         }

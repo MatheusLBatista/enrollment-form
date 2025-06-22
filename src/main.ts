@@ -1,6 +1,7 @@
 import './style.css';
 import { darkMode } from './darkMode.ts';
 import { EnrollmentSchema } from './validators/enrollmentSchema';
+import { z } from 'zod';
 
 const form = document.querySelector<HTMLFormElement>('#form')!;
 const name = document.querySelector<HTMLInputElement>('#name')!;
@@ -41,8 +42,15 @@ form.addEventListener('submit', async(event) => {
         })
 
         limparFormulario();
+
+        alert("Inscrição realizada com sucesso!")
     } catch (err) {
-        console.error("Erro de validação:", err);
+        if(err instanceof z.ZodError) {
+            const messages = err.errors.map(e=>e.message).join("\n");
+            alert(messages);
+        }else{
+            alert("Erro inesperado. Tente novamente mais tarde!");
+        }
     }
 });
 
