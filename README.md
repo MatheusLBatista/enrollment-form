@@ -42,7 +42,7 @@ Este projeto é um formulário de inscrição para cursos, desenvolvido com **Ty
 
 ---
 
-# Regras de Validação (Zod)
+## Regras de Validação (Zod)
 
 - **Nome**: mínimo de 2 caracteres
 - **Email**: formato válido e não vazio
