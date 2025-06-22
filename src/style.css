@@ -49,7 +49,7 @@ header {
   width: 64%;
 }
 
-form {
+form, .container-data {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -58,7 +58,7 @@ form {
   width: 100%;
 }
 
-.input-section {
+.input-section, .data {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -155,4 +155,14 @@ body.dark-mode .input-section textarea {
   background-color: #1E1E1E;
   color: #FFFFFF;
   border-color: #555555;
+}
+
+/* data.html */
+.item > span {
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.container-data {
+  gap: 16px;
 }

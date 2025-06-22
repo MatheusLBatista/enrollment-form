@@ -17,6 +17,15 @@
       "course": "html-css",
       "description": "",
       "terms": true
+    },
+    {
+      "id": "2588",
+      "name": "Matheus Lucas Batista",
+      "email": "matheus.teste@gmail.com",
+      "gender": "male",
+      "course": "nodejs",
+      "description": "Testando",
+      "terms": true
     }
   ]
 }
