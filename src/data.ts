@@ -23,12 +23,16 @@ async function loadData() {
                 const div = document.createElement('div');
                 div.className = 'data';
                 div.innerHTML = `
-                    <div>Nome: <span>${person.name}</span> </div>
-                    <div>E-mail: <span>${person.email}</span></div>
-                    <div>Sexo: <span>${person.gender}</span></div>
-                    <div>Curso: <span>${person.course}</span></div>
-                    <div>Descrição: <span>${description()}</span></div>
-                    <button type="submit" class="deleteBtn" data-id="${person.id}">Deletar</button>
+                    <div>
+                        <div>Nome: <span>${person.name}</span></div>
+                        <div>E-mail: <span>${person.email}</span></div>
+                        <div>Sexo: <span>${person.gender}</span></div>
+                        <div>Curso: <span>${person.course}</span></div>
+                        <div>Descrição: <span>${description()}</span></div>
+                    </div>
+                    <button type="button" class="deleteBtn" data-id="${person.id}" title="Deletar">
+                        <img id="trash-icon" src="/img/light-mode-delete.png" alt="Ícone de deletar do modo claro" class="trash-icon">
+                    </button>
                 `;
 
                 const deleteBtn = div.querySelector<HTMLButtonElement>('.deleteBtn');

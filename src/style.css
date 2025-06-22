@@ -184,3 +184,30 @@ body.dark-mode .input-section textarea {
   text-decoration: none;
   color: #FBFCFF;
 }
+
+.data {
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 100%;
+}
+
+.data > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.deleteBtn {
+  background: transparent;
+  margin: 20px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background: none;
+}
+
+.trash-icon {
+  width: 72%;
+}
